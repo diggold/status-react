@@ -166,7 +166,7 @@
             #(when (public-chat? % chat-id)
                (transport.chat/unsubscribe-from-chat % chat-id))
             #(when (group-chat? % chat-id)
-               (mailserver/remove-chat-from-mailserver-topic chat-id))
+               (mailserver/remove-chat-from-mailserver-topic % chat-id))
             (mailserver/remove-gaps chat-id)
             (mailserver/remove-range chat-id)
             (deactivate-chat chat-id)
